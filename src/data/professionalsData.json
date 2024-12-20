@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "name": "Dr. Rahul Mehta",
+      "qualification": "MBBS, MD",
+      "yearsOfExperience": "15",
+      "casesSolved": "200+",
+      "photo": "/images/dr1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Pooja Sharma",
+      "qualification": "MBBS, DGO",
+      "yearsOfExperience": "10",
+      "casesSolved": "150+",
+      "photo": "/images/dr2.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Suresh Gupta",
+      "qualification": "MD, DNB",
+      "yearsOfExperience": "20",
+      "casesSolved": "250+",
+      "photo": "/images/dr8.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Anita Jain",
+      "qualification": "MBBS, MS",
+      "yearsOfExperience": "18",
+      "casesSolved": "300+",
+      "photo": "/images/dr4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Rahul Mehta",
+      "qualification": "MBBS, MD",
+      "yearsOfExperience": "15",
+      "casesSolved": "200+",
+      "photo": "/images/dr5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Pooja Sharma",
+      "qualification": "MBBS, DGO",
+      "yearsOfExperience": "10",
+      "casesSolved": "150+",
+      "photo": "/images/dr6.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Dr. Suresh Gupta",
+      "qualification": "MD, DNB",
+      "yearsOfExperience": "20",
+      "casesSolved": "250+",
+      "photo": "/images/dr7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Dr. Anita Jain",
+      "qualification": "MBBS, MS",
+      "yearsOfExperience": "18",
+      "casesSolved": "300+",
+      "photo": "/images/dr8.jpg"
+    }
+  ]
+  
