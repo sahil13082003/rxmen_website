@@ -1,25 +1,25 @@
 [
     {
       "id": 1,
-      "image": "/images/Root+Cause+Analysis.webp",
+      "image": "/Images/Root+Cause+Analysis.webp",
       "title": "Root Cause Analysis",
       "description": "At RxMen, we focus on understanding and addressing the underlying causes of your sexual health issues, not just the symptoms. Our approach ensures you receive comprehensive treatment that tackles the root of the problem, leading to long-term improvements."
     },
     {
       "id": 2,
-      "image": "/images/Confidential+and+Supportive+Environment.webp",
+      "image": "/Images/Confidential+and+Supportive+Environment.webp",
       "title": "Comprehensive Support",
       "description": "Our team of doctors and therapists work together to provide holistic care, combining medical expertise with emotional and relational support. This integrated approach ensures that your physical, emotional, and relational needs are all addressed for the best possible outcome."
     },
     {
       "id": 3,
-      "image": "/images/First+Assessment.webp",
+      "image": "/Images/First+Assessment.webp",
       "title": "Personalized Treatment Plans",
       "description": "We create individualized treatment plans based on your specific situation. Our global experts design personalized strategies that are tailored to your unique challenges, ensuring that you get the most effective solutions for your sexual health concerns."
     },
     {
       "id": 4,
-      "image": "/images/confidential2.webp",
+      "image": "/Images/confidential2.webp",
       "title": "Confidential",
       "description": "At RxMen, we prioritize your privacy. We offer a safe and confidential space where you can share your intimate health concerns with complete trust and security. Our platform ensures you receive the support you need while maintaining 100% privacy."
     }

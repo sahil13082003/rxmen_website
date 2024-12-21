@@ -5,7 +5,7 @@
       "qualification": "MBBS, MD",
       "yearsOfExperience": "15",
       "casesSolved": "200+",
-      "photo": "/images/dr1.jpg"
+      "photo": "/Images/dr1.jpg"
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "qualification": "MBBS, DGO",
       "yearsOfExperience": "10",
       "casesSolved": "150+",
-      "photo": "/images/dr2.jpeg"
+      "photo": "/Images/dr2.jpeg"
     },
     {
       "id": 3,
@@ -21,7 +21,7 @@
       "qualification": "MD, DNB",
       "yearsOfExperience": "20",
       "casesSolved": "250+",
-      "photo": "/images/dr8.jpg"
+      "photo": "/Images/dr8.jpg"
     },
     {
       "id": 4,
@@ -29,7 +29,7 @@
       "qualification": "MBBS, MS",
       "yearsOfExperience": "18",
       "casesSolved": "300+",
-      "photo": "/images/dr4.jpg"
+      "photo": "/Images/dr4.jpg"
     },
     {
       "id": 5,
@@ -37,7 +37,7 @@
       "qualification": "MBBS, MD",
       "yearsOfExperience": "15",
       "casesSolved": "200+",
-      "photo": "/images/dr5.jpg"
+      "photo": "/Images/dr5.jpg"
     },
     {
       "id": 6,
@@ -45,7 +45,7 @@
       "qualification": "MBBS, DGO",
       "yearsOfExperience": "10",
       "casesSolved": "150+",
-      "photo": "/images/dr6.jpeg"
+      "photo": "/Images/dr6.jpeg"
     },
     {
       "id": 7,
@@ -53,7 +53,7 @@
       "qualification": "MD, DNB",
       "yearsOfExperience": "20",
       "casesSolved": "250+",
-      "photo": "/images/dr7.jpg"
+      "photo": "/Images/dr7.jpg"
     },
     {
       "id": 8,
@@ -61,7 +61,7 @@
       "qualification": "MBBS, MS",
       "yearsOfExperience": "18",
       "casesSolved": "300+",
-      "photo": "/images/dr8.jpg"
+      "photo": "/Images/dr8.jpg"
     }
   ]
   

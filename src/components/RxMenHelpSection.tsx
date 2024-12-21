@@ -45,7 +45,7 @@ const RxMenHelpSection: React.FC = () => {
           {/* Right: Image Section */}
           <div className="w-full lg:w-1/2">
             <Image
-              src="/images/Clip+path+group.webp"
+              src="/Images/Clip+path+group.webp"
               alt="Couples Therapy"
               width={500} // Adjust width accordingly
               height={300} // Adjust height accordingly
