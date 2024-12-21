@@ -1,3 +1,4 @@
+// PageContent.tsx (No changes needed)
 'use client';
 import React, { JSX } from 'react'; // Ensure React is imported
 import { usePathname } from 'next/navigation';
