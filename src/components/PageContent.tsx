@@ -1,4 +1,3 @@
-
 'use client';
 
 import { usePathname } from "next/navigation";
@@ -12,11 +11,12 @@ import SexologistSection from "@/components/SexologistSection";
 import RxMenHelpSection from "@/components/RxMenHelpSection";
 import HeroSectionPune from "./HeroSectionPune";
 import HeroSectionBengaluru from "./HeroSectionBengaluru";
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 import UnderstandingSexologist from "./UnderstandingSexologist";
 
+// Correct type for the component
 type ComponentEntry = {
-    component: React.FC<{any}>;
+    component: React.ElementType; // You can replace `any` with specific prop types if available
 };
 
 const componentsForPath: Record<string, ComponentEntry[]> = {
@@ -64,4 +64,3 @@ export default function PageContent() {
         </>
     );
 }
-
