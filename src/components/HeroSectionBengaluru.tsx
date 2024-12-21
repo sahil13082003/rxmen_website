@@ -1,5 +1,6 @@
 // File: HeroSectionBengaluru.tsx
 "use client"; // Mark this as a client component
+import Image from 'next/image';
 
 import React, { useState } from "react";
 import contentBengaluru from "@/data/content_Banguluru.json"; // Import the Bengaluru-specific content
@@ -79,12 +80,16 @@ const HeroSectionBengaluru: React.FC = () => {
       </div>
 
       <div className="image flex-1 mt-8 md:mt-0 w-full">
-        <img
+        <Image
           src={contentBengaluru.imageUrl}
           alt="Doctor"
+          width={600} // Add appropriate width
+          height={400} // Add appropriate height
           className="w-full md:w-3/4 mx-auto object-cover"
+          priority // Optionally optimize loading
         />
       </div>
+
     </section>
   );
 };

@@ -1,5 +1,5 @@
 "use client"; // Mark this as a client component
-
+import Image from "next/image";
 import React, { useState } from "react";
 import contentIndia from "@/data/content_India.json"; // Import the JSON file
 
@@ -58,19 +58,27 @@ const HeroSection: React.FC<{
               onChange={handleMobileNumberChange}
               maxLength={10} // Allow up to 10 digits
               placeholder="Enter a 10-Digit Mobile No."
-              className={`block w-full md:w-50 p-3 border-black-200 rounded-r ${
-                !isValid && submitted ? "border-red-500" : "border-black-300"
-              }`}
+              className={`block w-full md:w-50 p-3 border ${
+                !isValid && submitted ? "border-red-500" : "border-gray-300"
+              } rounded-r`}
             />
           </div>
 
           {/* Error message for invalid mobile number */}
           {!isValid && submitted && (
-            <p className="text-red-500 text-sm">This field must have exactly 10 numbers.</p>
+            <p className="text-red-500 text-sm mt-1">
+              This field must have exactly 10 numbers.
+            </p>
           )}
 
           <div className="terms-checkbox mb-6">
-            <input type="checkbox" id="terms" className="mr-2" required />
+            <input
+              type="checkbox"
+              id="terms"
+              className="mr-2"
+              required
+              aria-label="Agree to terms and conditions"
+            />
             <label htmlFor="terms" className="text-gray-700">
               I agree to the terms and conditions*
             </label>
@@ -82,7 +90,7 @@ const HeroSection: React.FC<{
               className={`bg-blue-500 text-white px-6 py-2 rounded w-70 ${
                 !isValid
                   ? "bg-gray-300 cursor-not-allowed"
-                  : "hover:bg-blue-700"
+                  : "hover:bg-blue-700 transition"
               }`}
               disabled={!isValid} // Button is disabled unless the number is valid
             >
@@ -93,10 +101,13 @@ const HeroSection: React.FC<{
       </div>
 
       <div className="image flex-1 mt-8 md:mt-0 w-full">
-        <img
+        <Image
           src={imageUrl}
           alt="Doctor"
+          width={600}
+          height={400}
           className="w-full md:w-3/4 mx-auto object-cover"
+          priority
         />
       </div>
     </section>
@@ -104,7 +115,7 @@ const HeroSection: React.FC<{
 };
 
 // Page Content Component
-const PageContent = () => {
+const PageContent: React.FC = () => {
   const { title, subtitle, description, imageUrl } = contentIndia; // Extract content from the imported JSON file
 
   return (

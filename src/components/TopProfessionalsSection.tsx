@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import professionalsData from "@/data/professionalsData.json"; // Import data
+import Image from 'next/image'; // Use Image component from Next.js
 
 const TopProfessionalsSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // state to track current index
@@ -33,10 +34,12 @@ const TopProfessionalsSection: React.FC = () => {
             key={professional.id}
             className="card bg-white p-6 rounded-2xl shadow-xl text-left w-full md:w-[380px] lg:w-[380px] xl:w-[380px] flex-shrink-0 border"
           >
-            <img
-              src={professional.photo}
+            <Image
+              src={professional.photo} // The path to the image
               alt={professional.name}
-              className="w-[350px] h-[230px] object-cover rounded-2xl mx-auto mb-4"
+              width={350} // You can control the image size here for responsiveness
+              height={230} // Image height for the aspect ratio
+              className="object-cover rounded-2xl mx-auto mb-4"
             />
             <h3 className="text-2xl font-semibold text-gray-800 mb-2">{professional.name}</h3>
             <p className="text-sm text-gray-600 mb-3">{professional.qualification}</p>
@@ -62,7 +65,6 @@ const TopProfessionalsSection: React.FC = () => {
         </button>
       </div>
     </section>
-
   );
 };
 

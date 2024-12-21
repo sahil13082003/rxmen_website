@@ -1,5 +1,8 @@
 // File: HeroSectionPune.tsx
+
 "use client"; // Mark this as a client component
+import Image from 'next/image';
+
 
 import React, { useState } from "react";
 import contentPune from "@/data/content_Pune.json"; // Import the Pune-specific content
@@ -81,12 +84,16 @@ const HeroSectionPune: React.FC = () => {
       </div>
 
       <div className="image flex-1 mt-8 md:mt-0 w-full">
-        <img
+        <Image
           src={contentPune.imageUrl}
           alt="Doctor"
+          width={600} // Replace with actual dimensions
+          height={400} // Replace with actual dimensions
           className="w-full md:w-3/4 mx-auto object-cover"
+          priority // Optimize loading if needed
         />
       </div>
+
     </section>
   );
 };

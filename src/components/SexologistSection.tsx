@@ -1,5 +1,6 @@
 import React from "react";
 import cardData from "@/data/sexologistDetails.json";
+import Image from 'next/image';  // Using Next.js Image component
 
 const SexologistSection: React.FC = () => {
   return (
@@ -40,10 +41,12 @@ const SexologistSection: React.FC = () => {
               key={card.id}
               className="border rounded-lg shadow-lg p-6 bg-white h-auto"
             >
-              <img
+              <Image
                 src={card.image}
                 alt={card.title}
-                className="w-16 h-16 object-cover rounded-full mb-4"
+                width={64}  // Set a fixed width
+                height={64}  // Set a fixed height for circular images
+                className="object-cover rounded-full mb-4"
               />
               <h3 className="text-xl font-bold text-gray-800 mb-2">
                 {card.title}

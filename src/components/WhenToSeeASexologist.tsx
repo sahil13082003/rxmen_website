@@ -1,5 +1,7 @@
 import React from "react";
 import data from "@/data/when-to-see-data.json";
+import Image from "next/image"; // Make sure to import Image from 'next/image'
+
 
 interface CardData {
     id: number;
@@ -13,7 +15,7 @@ const WhenToSeeASexologist: React.FC = () => {
 
     return (
         <section className="when-to-see py-16 px-8 md:px-160">
-            <div className="w-full mx-auto bg-blue-200  p-8 rounded-lg shadow-lg">
+            <div className="w-full mx-auto bg-blue-200 p-8 rounded-lg shadow-lg">
                 {/* Title */}
                 <h2 className="text-4xl font-bold text-center mb-12">
                     <span className="text-blue-600">When Should</span> I See A Sexologist?
@@ -24,11 +26,15 @@ const WhenToSeeASexologist: React.FC = () => {
                     {cardsData.map((card) => (
                         <div
                             key={card.id}
-                            className="card bg-white p-6 rounded-lg shadow-lg h-[450px] sm:h-[380px]">
-                            <img
-                                src={card.imageUrl}
-                                alt={card.title}
-                                className="w-16 h-16 object-cover rounded-full mb-4"
+                            className="card bg-white p-6 rounded-lg shadow-lg h-[450px] sm:h-[380px]"
+                        >
+                            {/* Use Next.js Image component */}
+                            <Image
+                                src={card.imageUrl} // Source path of the image
+                                alt={card.title} // Alt text for the image
+                                width={64} // You can define the width
+                                height={64} // You can define the height
+                                className="object-cover rounded-full mb-4"
                             />
                             <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
@@ -37,7 +43,6 @@ const WhenToSeeASexologist: React.FC = () => {
                         </div>
                     ))}
                 </div>
-
             </div>
         </section>
     );

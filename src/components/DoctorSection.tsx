@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import the Image component
 import doctorData from '@/data/doctorData.json'; // Importing the JSON data
 
 const DoctorSection: React.FC = () => {
@@ -9,10 +10,13 @@ const DoctorSection: React.FC = () => {
             <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
                 {/* Left Section: Image */}
                 <div className="flex-1 mb-8 md:mb-0 flex-shrink-0">
-                    <img
+                    <Image
                         src={doctor.imageUrl}
                         alt={doctor.name}
-                        className="w-full h-auto max-w-[400px] object-cover rounded-lg" // Remove fixed height for responsiveness
+                        width={400} // Set maximum width
+                        height={400} // Keep an approximate square ratio for alignment
+                        className="w-full h-auto max-w-[400px] object-cover rounded-lg"
+                        priority // Add priority loading for better performance
                     />
                 </div>
 

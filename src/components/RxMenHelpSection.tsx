@@ -1,5 +1,6 @@
 import React from "react";
 import cardData from "@/data/rxmenBenefits.json";
+import Image from 'next/image';  // Using Next.js Image component
 
 const RxMenHelpSection: React.FC = () => {
   return (
@@ -24,10 +25,12 @@ const RxMenHelpSection: React.FC = () => {
                 key={card.id}
                 className="flex items-start border rounded-lg shadow-md p-4 bg-gray-200"
               >
-                <img
-                  src={card.image}
+                <Image
+                  src={card.image} // Source for each card image
                   alt={card.title}
-                  className="w-12 h-12 mr-4 flex-shrink-0"
+                  width={48} // Adjust width as per your design
+                  height={48} // Adjust height accordingly
+                  className="mr-4 flex-shrink-0"
                 />
                 <div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">
@@ -41,9 +44,11 @@ const RxMenHelpSection: React.FC = () => {
 
           {/* Right: Image Section */}
           <div className="w-full lg:w-1/2">
-            <img
+            <Image
               src="/images/Clip+path+group.webp"
               alt="Couples Therapy"
+              width={500} // Adjust width accordingly
+              height={300} // Adjust height accordingly
               className="rounded-lg shadow-lg hidden md:block"
             />
           </div>

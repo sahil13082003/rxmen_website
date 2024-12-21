@@ -1,4 +1,5 @@
 "use client"; // Mark this as a client component
+import Image from 'next/image';
 
 import React, { useState } from "react";
 
@@ -41,16 +42,19 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="flex-1 text-center">
-        <img
+        {/* Update logo to use next/image */}
+        <Image
           src="/Images/logo-blue.webp" // Update with your logo path
           alt="Logo"
+          width={128} // Adjust dimensions
+          height={32}
           className="w-32 mx-auto"
         />
       </div>
 
       <div className="hidden md:flex items-center space-x-2 text-white">
         <button className="bg-white-500 text-black py-2 px-4 rounded">
-          Let's Talk
+          Let&apos;s Talk
         </button>
       </div>
 
