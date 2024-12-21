@@ -1,6 +1,6 @@
 import React from "react";
 import cardData from "@/data/sexologistDetails.json";
-import Image from 'next/image';  // Using Next.js Image component
+import Image from 'next/image';
 
 const SexologistSection: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const SexologistSection: React.FC = () => {
             health and overall well-being.
           </p>
           <p className="text-gray-700">
-            When searching for the "best sexologist near me", it's important to
+            When searching for the &quot;best sexologist near me&quot;, it&apos;s important to
             choose a licensed professional with extensive experience in
             addressing sexual health issues. Many top sexologists adopt a
             holistic approach, addressing both the physical and emotional
@@ -41,11 +41,12 @@ const SexologistSection: React.FC = () => {
               key={card.id}
               className="border rounded-lg shadow-lg p-6 bg-white h-auto"
             >
+              {/* Use next/image instead of img */}
               <Image
                 src={card.image}
                 alt={card.title}
-                width={64}  // Set a fixed width
-                height={64}  // Set a fixed height for circular images
+                width={64}  // You can adjust these sizes
+                height={64} // You can adjust these sizes
                 className="object-cover rounded-full mb-4"
               />
               <h3 className="text-xl font-bold text-gray-800 mb-2">

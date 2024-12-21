@@ -22,18 +22,22 @@ const TestimonialsSection = () => {
               {/* Circle in top-right corner */}
               <div className="absolute top-1 right-0 w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center right-1">
                 {/* Quote Image */}
-                <img
+                <Image
                   src="/images/quote.png"
                   alt="Quote"
-                  className="w-10 h-10 object-contain"
+                  width={40}
+                  height={40}
+                  className="object-contain"
                 />
               </div>
 
               {/* Profile Image */}
-              <img
+              <Image
                 src={testimonial.profileImage}
                 alt={`Profile of ${testimonial.userId}`}
-                className="w-16 h-16 object-cover rounded-full mb-4"
+                width={64} // Width for the profile image
+                height={64} // Height for the profile image
+                className="object-cover rounded-full mb-4"
               />
               <h3 className="text-xl font-semibold mb-2">{testimonial.userId}</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
