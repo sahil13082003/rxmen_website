@@ -10,7 +10,10 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import SexologistSection from "@/components/SexologistSection";
 import RxMenHelpSection from "@/components/RxMenHelpSection";
 
-const componentsForPath = {
+// Type declaration for the object keys
+type Path = '/sexologist-near-me' | '/sexologist-in-pune' | '/sex-therapy-in-bangalore';
+
+const componentsForPath: Record<Path, JSX.Element[]> = {
   "/sexologist-near-me": [
     <HeroSection key="hero" />,
     <DoctorSection key="doctor" />,
@@ -30,7 +33,7 @@ const componentsForPath = {
 };
 
 export default function PageContent() {
-  const path = usePathname();
+  const path = usePathname() as Path; // Tell TypeScript that path is one of the defined types
   const componentsToRender = componentsForPath[path] || null;
 
   return (
