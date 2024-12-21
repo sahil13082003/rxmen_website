@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
               <div className="absolute top-1 right-0 w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center right-1">
                 {/* Quote Image */}
                 <Image
-                  src="/images/quote.png"
+                  src="/Images/quote.png"
                   alt="Quote"
                   width={40}
                   height={40}

@@ -34,12 +34,12 @@ const HeroSectionBengaluru: React.FC = () => {
   return (
     <section className="hero-container flex flex-col md:flex-row items-center justify-between bg-blue-100 p-8 rounded-2xl">
       <div className="content flex-1 text-left w-full">
-        <h1 className="text-8xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
           {contentBengaluru.title}
         </h1>
         <h2 className="text-lg mb-4">{contentBengaluru.subtitle}</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mobile-input mb-4 flex md:flex-row flex-col">
+          <div className="mobile-input mb-4 flex flex-wrap items-center">
             {/* +91 block */}
             <div className="prefix flex items-center justify-center bg-gray-200 text-gray-600 text-lg px-3 py-2 rounded-l">
               +91
@@ -53,9 +53,11 @@ const HeroSectionBengaluru: React.FC = () => {
               onChange={handleMobileNumberChange}
               maxLength={10} // Allow up to 10 digits
               placeholder="Enter a 10-Digit Mobile No."
-              className={`block w-full md:w-50 p-3 border-black-200 rounded-r ${!isValid && submitted ? 'border-red-500' : 'border-black-300'}`}
+              className={`flex-1 min-w-0 p-3 border ${!isValid && submitted ? "border-red-500" : "border-gray-300"
+                } rounded-r`}
             />
           </div>
+
 
           {/* Error message for invalid mobile number */}
           {!isValid && submitted && (

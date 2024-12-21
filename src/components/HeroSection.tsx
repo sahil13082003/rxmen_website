@@ -44,7 +44,7 @@ const HeroSection: React.FC<{
         <p className="text-gray-700 mb-6">{description}</p>
 
         <form onSubmit={handleSubmit}>
-          <div className="mobile-input mb-4 flex md:flex-row flex-col">
+          <div className="mobile-input mb-4 flex flex-wrap items-center">
             {/* +91 block */}
             <div className="prefix flex items-center justify-center bg-gray-200 text-gray-600 text-lg px-3 py-2 rounded-l">
               +91
@@ -58,9 +58,8 @@ const HeroSection: React.FC<{
               onChange={handleMobileNumberChange}
               maxLength={10} // Allow up to 10 digits
               placeholder="Enter a 10-Digit Mobile No."
-              className={`block w-full md:w-50 p-3 border ${
-                !isValid && submitted ? "border-red-500" : "border-gray-300"
-              } rounded-r`}
+              className={`flex-1 min-w-0 p-3 border ${!isValid && submitted ? "border-red-500" : "border-gray-300"
+                } rounded-r`}
             />
           </div>
 
@@ -87,11 +86,10 @@ const HeroSection: React.FC<{
           <div>
             <button
               type="submit"
-              className={`bg-blue-500 text-white px-6 py-2 rounded w-70 ${
-                !isValid
+              className={`bg-blue-500 text-white px-6 py-2 rounded w-70 ${!isValid
                   ? "bg-gray-300 cursor-not-allowed"
                   : "hover:bg-blue-700 transition"
-              }`}
+                }`}
               disabled={!isValid} // Button is disabled unless the number is valid
             >
               Talk to the Expert
