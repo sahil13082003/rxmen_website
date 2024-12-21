@@ -21,8 +21,8 @@ const TopProfessionalsSection: React.FC = () => {
   };
 
   return (
-    <section className="top-professionals py-16 px-8 md:px-16">
-      <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
+    <section className="top-professionals bg-white py-16 px-8 md:px-16">
+      <h2 className="text-3xl font-bold text-black text-center mb-8">
         And Other Top Professionals.
       </h2>
 
@@ -41,7 +41,7 @@ const TopProfessionalsSection: React.FC = () => {
             <h3 className="text-2xl font-semibold text-gray-800 mb-2">{professional.name}</h3>
             <p className="text-sm text-gray-600 mb-3">{professional.qualification}</p>
             <p className="text-lg font-bold text-gray-600">{professional.yearsOfExperience} Years of Experience</p>
-            <p className="text-lg font-bold  text-gray-600">{professional.casesSolved} Cases Solved</p>
+            <p className="text-lg font-bold text-gray-600">{professional.casesSolved} Cases Solved</p>
           </div>
         ))}
       </div>
@@ -62,6 +62,7 @@ const TopProfessionalsSection: React.FC = () => {
         </button>
       </div>
     </section>
+
   );
 };
 

@@ -6,7 +6,7 @@ import contentPune from "@/data/content_Pune.json"; // Import the Pune-specific 
 
 const HeroSectionPune: React.FC = () => {
   const [mobileNumber, setMobileNumber] = useState(""); // State for mobile number
-  const [isValid, setIsValid] = useState(true); // State for input validation
+  const [isValid, setIsValid] = useState(false); // Initially set to false (button disabled by default)
   const [submitted, setSubmitted] = useState(false); // To track form submission
 
   const handleMobileNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,8 +14,9 @@ const HeroSectionPune: React.FC = () => {
     const formattedValue = value.replace(/[^0-9]/g, ''); // Strip non-numeric characters
     setMobileNumber(formattedValue);
 
+    // Set validity based on length of the mobile number
     if (formattedValue.length === 10) {
-      setIsValid(true); // Valid 10-digit input
+      setIsValid(true); // Valid input
     } else {
       setIsValid(false); // Invalid input
     }
@@ -35,7 +36,7 @@ const HeroSectionPune: React.FC = () => {
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
           {contentPune.title}
         </h1>
-        <h2 className="text-2xl font-bold mb-4">{contentPune.subtitle}</h2>
+        {/* <h2 className="text-2xl font-bold mb-4">{contentPune.subtitle}</h2> */}
         <p className="text-gray-700 mb-6">{contentPune.description}</p>
 
         <form onSubmit={handleSubmit}>
@@ -71,7 +72,7 @@ const HeroSectionPune: React.FC = () => {
             <button
               type="submit"
               className={`bg-blue-500 text-white px-6 py-2 rounded w-70 ${!isValid ? 'bg-gray-300 cursor-not-allowed' : 'hover:bg-blue-700'}`}
-              disabled={!isValid}
+              disabled={!isValid} // Button is disabled until the mobile number is valid
             >
               {contentPune.buttonText}
             </button>

@@ -1,10 +1,8 @@
 
-import PageContent from "@/components/PageContent";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div>
-      <PageContent />
-    </div>
-  );
+  redirect("/sexologist-near-me");
+  return null;
 }
+

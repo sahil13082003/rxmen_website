@@ -1,6 +1,5 @@
 "use client"; // Mark this as a client component
 
-
 import React, { useState } from "react";
 import contentIndia from "@/data/content_India.json"; // Import the JSON file
 
@@ -12,21 +11,18 @@ const HeroSection: React.FC<{
   imageUrl: string;
 }> = ({ title, subtitle, description, imageUrl }) => {
   const [mobileNumber, setMobileNumber] = useState(""); // State for mobile number
-  const [isValid, setIsValid] = useState(true); // State for input validation
+  const [isValid, setIsValid] = useState(false); // State for input validation
   const [submitted, setSubmitted] = useState(false); // To track form submission
 
   const handleMobileNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
 
     // Ensure input is only numbers and validate length
-    const formattedValue = value.replace(/[^0-9]/g, ''); // Strip non-numeric characters
+    const formattedValue = value.replace(/[^0-9]/g, ""); // Strip non-numeric characters
     setMobileNumber(formattedValue);
 
-    if (formattedValue.length === 10) {
-      setIsValid(true); // If input is 10 digits, it's valid
-    } else {
-      setIsValid(false); // If it isn't 10 digits, it's invalid
-    }
+    // Update validation state
+    setIsValid(formattedValue.length === 10); // Valid only if length is exactly 10 digits
   };
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -62,7 +58,9 @@ const HeroSection: React.FC<{
               onChange={handleMobileNumberChange}
               maxLength={10} // Allow up to 10 digits
               placeholder="Enter a 10-Digit Mobile No."
-              className={`block w-full md:w-50 p-3 border-black-200 rounded-r ${!isValid && submitted ? 'border-red-500' : 'border-black-300'}`}
+              className={`block w-full md:w-50 p-3 border-black-200 rounded-r ${
+                !isValid && submitted ? "border-red-500" : "border-black-300"
+              }`}
             />
           </div>
 
@@ -73,14 +71,20 @@ const HeroSection: React.FC<{
 
           <div className="terms-checkbox mb-6">
             <input type="checkbox" id="terms" className="mr-2" required />
-            <label htmlFor="terms" className="text-gray-700">I agree to the terms and conditions*</label>
+            <label htmlFor="terms" className="text-gray-700">
+              I agree to the terms and conditions*
+            </label>
           </div>
 
           <div>
             <button
               type="submit"
-              className={`bg-blue-500 text-white px-6 py-2 rounded w-70 ${!isValid ? 'bg-gray-300 cursor-not-allowed' : 'hover:bg-blue-700'}`}
-              disabled={!isValid}
+              className={`bg-blue-500 text-white px-6 py-2 rounded w-70 ${
+                !isValid
+                  ? "bg-gray-300 cursor-not-allowed"
+                  : "hover:bg-blue-700"
+              }`}
+              disabled={!isValid} // Button is disabled unless the number is valid
             >
               Talk to the Expert
             </button>

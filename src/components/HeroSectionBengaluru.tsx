@@ -6,7 +6,7 @@ import contentBengaluru from "@/data/content_Banguluru.json"; // Import the Beng
 
 const HeroSectionBengaluru: React.FC = () => {
   const [mobileNumber, setMobileNumber] = useState(""); // State for mobile number
-  const [isValid, setIsValid] = useState(true); // State for input validation
+  const [isValid, setIsValid] = useState(false); // Initially invalid until 10 digits are entered
   const [submitted, setSubmitted] = useState(false); // To track form submission
 
   const handleMobileNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,6 +14,7 @@ const HeroSectionBengaluru: React.FC = () => {
     const formattedValue = value.replace(/[^0-9]/g, ''); // Strip non-numeric characters
     setMobileNumber(formattedValue);
 
+    // Set validity based on the length of the mobile number (10 digits)
     if (formattedValue.length === 10) {
       setIsValid(true); // Valid 10-digit input
     } else {
@@ -69,7 +70,7 @@ const HeroSectionBengaluru: React.FC = () => {
             <button
               type="submit"
               className={`bg-blue-500 text-white px-6 py-2 rounded w-70 ${!isValid ? 'bg-gray-300 cursor-not-allowed' : 'hover:bg-blue-700'}`}
-              disabled={!isValid}
+              disabled={!isValid} // Button is disabled until the mobile number is valid (10 digits)
             >
               {contentBengaluru.buttonText}
             </button>

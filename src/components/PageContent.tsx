@@ -13,9 +13,10 @@ import RxMenHelpSection from "@/components/RxMenHelpSection";
 import HeroSectionPune from "./HeroSectionPune";
 import HeroSectionBengaluru from "./HeroSectionBengaluru";
 import Navbar from "./Navbar"
+import UnderstandingSexologist from "./UnderstandingSexologist";
 
 type ComponentEntry = {
-    component: React.FC<any>;
+    component: React.FC<{any}>;
 };
 
 const componentsForPath: Record<string, ComponentEntry[]> = {
@@ -26,7 +27,6 @@ const componentsForPath: Record<string, ComponentEntry[]> = {
         { component: TopProfessionalsSection },
         { component: SexologistSection },
         { component: RxMenHelpSection },
-        { component: UnderstandingSexTherapy },
         { component: WhenToSeeASexologist },
         { component: TestimonialsSection },
     ],
@@ -35,9 +35,8 @@ const componentsForPath: Record<string, ComponentEntry[]> = {
         { component: HeroSectionPune },
         { component: DoctorSection },
         { component: TopProfessionalsSection },
-        { component: SexologistSection },
+        { component: UnderstandingSexologist },
         { component: RxMenHelpSection },
-        { component: UnderstandingSexTherapy },
         { component: WhenToSeeASexologist },
         { component: TestimonialsSection },
     ],
@@ -46,9 +45,8 @@ const componentsForPath: Record<string, ComponentEntry[]> = {
         { component: HeroSectionBengaluru },
         { component: DoctorSection },
         { component: TopProfessionalsSection },
-        { component: SexologistSection },
-        { component: RxMenHelpSection },
         { component: UnderstandingSexTherapy },
+        { component: RxMenHelpSection },
         { component: WhenToSeeASexologist },
         { component: TestimonialsSection },
     ],

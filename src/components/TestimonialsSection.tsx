@@ -1,5 +1,6 @@
 import React from "react";
 import testimonialsData from "@/data/testimonials.json"; // Adjust the path according to your project structure
+import Image from "next/image";
 
 const TestimonialsSection = () => {
   return (
