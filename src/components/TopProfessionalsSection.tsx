@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import professionalsData from "@/data/professionalsData.json"; // Import data
 import Image from 'next/image'; // Use Image component from Next.js
 
@@ -21,6 +21,16 @@ const TopProfessionalsSection: React.FC = () => {
     );
   };
 
+  // Automatic scrolling using useEffect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide(); // Automatically go to the next slide
+    }, 5000); // Adjust the delay (5000ms = 5 seconds)
+
+    // Clear the interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="top-professionals bg-white py-16 px-8 md:px-16">
       <h2 className="text-3xl font-bold text-black text-center mb-8">
@@ -37,7 +47,7 @@ const TopProfessionalsSection: React.FC = () => {
             <Image
               src={professional.photo} // The path to the image
               alt={professional.name}
-              width={350} // You can control the image size here for responsiveness
+              width={350} // Control the image size here for responsiveness
               height={230} // Image height for the aspect ratio
               className="object-cover rounded-2xl mx-auto mb-4"
             />

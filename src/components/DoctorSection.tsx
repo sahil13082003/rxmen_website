@@ -6,10 +6,10 @@ const DoctorSection: React.FC = () => {
     const { doctor } = doctorData; // Destructuring to get data
 
     return (
-        <section className="w-full h-auto doctor-section py-16 px-8 md:px-16 flex items-center">
+        <section className="w-full h-auto doctor-section py-2 px-8 md:px-16 flex items-center">
             <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
                 {/* Left Section: Image */}
-                <div className="flex-1 mb-8 md:mb-0 flex-shrink-0">
+                <div className="flex-1 mb-16 md:mb-0 flex-shrink-0">
                     <Image
                         src={doctor.imageUrl}
                         alt={doctor.name}
