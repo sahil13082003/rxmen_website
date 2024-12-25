@@ -35,7 +35,7 @@ const HeroSection: React.FC<{
   };
 
   return (
-    <section className="hero-container flex flex-col md:flex-row items-center justify-between bg-blue-100 p-8 rounded-2xl">
+    <section className="hero-container flex flex-col md:flex-row items-center justify-between bg-blue-100 p-4 rounded-2xl">
       <div className="content flex-1 text-left w-full">
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
           {title}
