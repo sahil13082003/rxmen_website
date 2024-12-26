@@ -32,13 +32,19 @@ const TopProfessionalsSection: React.FC = () => {
   };
 
   const handleWheel = (event: React.WheelEvent) => {
-    if (isScrolling) return; // Prevent rapid scrolls
-    if (event.deltaX > 0) {
+    // if (isScrolling) return; // Prevent rapid scrolls
+  
+    // Multiply deltaX by a factor to increase scroll speed
+    const scrollSpeed = 5; // Increase or decrease this value to control the speed
+  
+    if (event.deltaX * scrollSpeed > 0) {
       nextSlide(); // Scroll forward on right scroll
-    } else if (event.deltaX < 0) {
+    } else if (event.deltaX * scrollSpeed < 0) {
       prevSlide(); // Scroll backward on left scroll
     }
   };
+  
+  
   
 
   // Auto-scroll functionality
